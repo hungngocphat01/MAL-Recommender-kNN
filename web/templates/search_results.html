@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% from 'anime_card.html' import anime_card %}
+
+{% block content %}
+
+<div class="container">
+  <div class="text-center py-5">
+    <div class="h2">
+      Search result
+    </div>
+  
+    <div class="h4">
+      For: "{{ query }}"
+    </div>
+  </div>
+
+
+  <div class="grid-container">
+    {% for key, anime in animes %}
+      {{ anime_card(anime) }}
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.badge.badge-font-bigger {
+  font-size: 0.8em;
+}
+
+a-div {
+  display: block;
+  text-decoration: none;
+}
+
+.current-anime-card {
+  max-height: 200px;
+}

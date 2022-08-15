@@ -1,0 +1,56 @@
+{% macro anime_card(anime) -%}
+  <div class="card">
+    <div class="row no-gutters">
+      <!-- CARD IMAGE -->
+      <a class="col-md-4" href="/recommend/{{ anime.anime_id }}">
+        <img src="{{ anime.image_url }}" class="card-img img-fluid" alt="{{ anime.title }}">
+      </a>
+      <!-- CARD BODY -->
+      <div class="col-md-8">
+        <div class="card-body h-100">
+          <h5 class="card-title pt-3">{{ anime.title }}</h5>
+          
+          <div>
+            <!-- score and rank -->
+            <div class="row h-100">
+              <div class="col-md-6 h-100 d-flex flex-column justify-content-center align-items-center">
+                <div class="badge badge-font-bigger w-100 bg-primary">SCORE</div>
+                <div class="h5 pt-3">{{ anime.score }}</div>
+              </div>
+              <div class="col-md-6 h-100 d-flex flex-column justify-content-center align-items-center">
+                <div class="badge badge-font-bigger w-100 bg-success">RANK</div>
+                <div class="h5 pt-3">#{{ anime['rank'] | int }}</div>
+              </div>
+            </div>
+
+            <!-- Genre -->
+            <div>
+              {% for genre in anime.genre %}
+              <span class="badge bg-secondary">{{ genre }}</span>
+              {% endfor %}
+            </div>
+
+            <!-- other info -->
+            <div class="text-secondary pt-2">
+              <div>
+                <span>
+                  Aired from: {{ anime.aired_string }}
+                </span>
+                <span class="px-1">|</span>
+                <span>
+                  {{ anime.type }}
+                </span>
+              </div>
+              <div>
+                <span>
+                  {{ anime.studio }}
+                </span>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endmacro %}
