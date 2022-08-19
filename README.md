@@ -1,6 +1,6 @@
 # Anime recommendation system on MAL dataset
 
-This is my first recommendation system using collaborative filtering. For simplicity, I decided to use sklearn's `KNearestNeighbors` for this project.
+This is my first recommendation system using collaborative filtering. I only used `NearestNeighbors` from `sklearn` instead of dedicated libraries like `scikit-surprise` because I wanted to challenge myself a little bit.
 
 Dataset used: [MyAnimeList Dataset](https://www.kaggle.com/datasets/azathoth42/myanimelist).
 
@@ -13,7 +13,7 @@ Dataset used: [MyAnimeList Dataset](https://www.kaggle.com/datasets/azathoth42/m
 1. Download the following files from the above Kaggle dataset
    - `anime_cleaned.csv.zip` 
    - `UserAnimeList.csv.zip`
-2. Put them into `modeling` folder (do not extract).
+2. Put them into `preprocessing` folder (do not extract).
 3. Run `preprocessing/build.sh`.
 4. After building, copy following files to `web/models/`
    - `anime_db.parquet`
@@ -23,7 +23,7 @@ Dataset used: [MyAnimeList Dataset](https://www.kaggle.com/datasets/azathoth42/m
 
 Note: the user-anime dataset consists of around 80 million rows, so make sure that you have enough memory to run the build script. It ran fine on my laptop with 16 GB of RAM.
 
-You should also use the same Python version to build the dataset and to serve the Flask application.
+You should also make sure that the Python version for building the dataset and serving the Flask application is the same.
 
 ## Short demo
 
