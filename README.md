@@ -6,7 +6,7 @@ Dataset used: [MyAnimeList Dataset](https://www.kaggle.com/datasets/azathoth42/m
 
 ## Project structure
 - `preprocessing`: source files and notebooks to the preprocess original dataset and build the sparse user-movies matrix.
-- `web`: a simple Flask application for demonstrating the system.
+- `web`: a simple Flask application for demonstrating the system. For simplicity, the method I used for serving is quite ad-hoc.
 
 ## How to
 
